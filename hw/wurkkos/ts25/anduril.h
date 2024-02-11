@@ -11,7 +11,8 @@
 #define USE_AUX_RGB_LEDS
 
 // don't turn on the aux LEDs while main LEDs are on
-#ifdef USE_INDICATOR_LED_WHILE_RAMPING
+// AS: keep on aux 
+#ifndef USE_INDICATOR_LED_WHILE_RAMPING
 #undef USE_INDICATOR_LED_WHILE_RAMPING
 #endif
 
@@ -76,7 +77,8 @@
 // use aux red + aux blue for police strobe
 #define USE_POLICE_COLOR_STROBE_MODE
 #define POLICE_STROBE_USES_AUX
-#define POLICE_COLOR_STROBE_CH1        CM_AUXRED
+// AS: green
+#define POLICE_COLOR_STROBE_CH1        CM_AUXGRN
 #define POLICE_COLOR_STROBE_CH2        CM_AUXBLU
 
 // don't blink mid-ramp

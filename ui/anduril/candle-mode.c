@@ -9,6 +9,9 @@
 #include "anduril/sunset-timer.h"
 #endif
 
+
+
+
 uint8_t candle_mode_state(Event event, uint16_t arg) {
     static int8_t ramp_direction = 1;
     #define MAX_CANDLE_LEVEL (MAX_LEVEL-CANDLE_AMPLITUDE-15)
@@ -100,6 +103,14 @@ uint8_t candle_mode_state(Event event, uint16_t arg) {
         #endif  // ifdef USE_SUNSET_TIMER
 
         set_level(brightness);
+        // AS
+        #ifdef USE_INDICATOR_LED
+        indicator_led(brightness < 10 ? 1 : brightness);
+        #endif
+        #ifdef USE_AUX_RGB_LEDS
+        rgb_led_set(brightness < 10 ? 0b000001 : 0b000010);
+        #endif
+
 
         // wave1: slow random LFO
         // TODO: make wave slower and more erratic?

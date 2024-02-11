@@ -237,7 +237,8 @@ inline void police_color_strobe_iter() {
     // one iteration of main loop()
     uint8_t del = 66;
     // TODO: make police strobe brightness configurable
-    uint8_t bright = memorized_level;
+    // AS 
+    uint8_t bright = 25;
     //uint8_t channel = channel_mode;
 
     for (uint8_t i=0; i<10; i++) {
@@ -268,7 +269,8 @@ inline void lightning_storm_iter() {
     brightness = 1 << (pseudo_rand() % 7);  // 1, 2, 4, 8, 16, 32, 64
     brightness += 1 << (pseudo_rand() % 5);  // 2 to 80 now
     brightness += pseudo_rand() % brightness;  // 2 to 159 now (w/ low bias)
-    if (brightness > MAX_LEVEL) brightness = MAX_LEVEL;
+    // AS
+    if (brightness > DEFAULT_LEVEL) brightness = DEFAULT_LEVEL;
     set_level(brightness);
     nice_delay_ms(rand_time);
 

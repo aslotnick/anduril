@@ -40,10 +40,12 @@
 #define DEFAULT_LEVEL 50
 
 #define RAMP_SMOOTH_FLOOR    1
-#define RAMP_SMOOTH_CEIL     130
+// AS: new default
+#define RAMP_SMOOTH_CEIL     90
 // 20 38 56 [75] 93 111 130
 // 10 30 50 70 [90] 110 130
 #define RAMP_DISCRETE_FLOOR  10
+// AS
 #define RAMP_DISCRETE_CEIL   130
 #define RAMP_DISCRETE_STEPS  7
 
@@ -52,6 +54,7 @@
 // 20 47 [75] 102 130
 // 10 30 50 70 [90] 110 130
 #define SIMPLE_UI_FLOOR  10
+// AS 
 #define SIMPLE_UI_CEIL   130
 #define SIMPLE_UI_STEPS  7
 

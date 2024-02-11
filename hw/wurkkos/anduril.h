@@ -5,12 +5,15 @@
 
 // allow Aux Config and Strobe Modes in Simple UI
 #define USE_EXTENDED_SIMPLE_UI
+// AS: no extended
+#undef USE_EXTENDED_SIMPLE_UI
 
 // Allow 3C in Simple UI for switching between smooth and stepped ramping
 #define USE_SIMPLE_UI_RAMPING_TOGGLE
 
 // enable 2 click turbo (Anduril 1 style)
-#define DEFAULT_2C_STYLE 1
+// AS: no turbo
+#define DEFAULT_2C_STYLE 0
 
 // enable SOS in the blinkies group
 #define USE_SOS_MODE
@@ -23,4 +26,8 @@
 // higher temperature limit because attiny1616 is more accurate
 #undef DEFAULT_THERM_CEIL
 #define DEFAULT_THERM_CEIL 50
+
+// AS
+#define STROBE_BRIGHTNESS DEFAULT_LEVEL
+#define DEFAULT_POST_OFF_VOLTAGE_SECONDS  0
 

@@ -173,7 +173,8 @@ uint8_t memorized_level = DEFAULT_LEVEL;
 #endif
 #ifdef USE_RAMP_AFTER_MOON_CONFIG
 #ifndef DEFAULT_DONT_RAMP_AFTER_MOON
-#define DEFAULT_DONT_RAMP_AFTER_MOON 0
+// AS: enable
+#define DEFAULT_DONT_RAMP_AFTER_MOON 1
 #endif
 #endif
 // current values, regardless of style

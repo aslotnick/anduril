@@ -30,7 +30,8 @@ enum CHANNEL_MODES {
 #define DEFAULT_CHANNEL_MODE  CM_MAIN
 
 // right-most bit first, modes are in fedcba9876543210 order
-#define CHANNEL_MODES_ENABLED 0b00000001
+// AS
+#define CHANNEL_MODES_ENABLED 0b00000011
 
 
 #define PWM_CHANNELS 2  // old, remove this

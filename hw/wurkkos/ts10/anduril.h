@@ -48,11 +48,15 @@
 #define DEFAULT_LEVEL 50
 
 #define RAMP_SMOOTH_FLOOR    1
-#define RAMP_SMOOTH_CEIL     130
+// AS
+#define RAMP_SMOOTH_CEIL     90
 // 10 30 50 70 [90] 110 130
 #define RAMP_DISCRETE_FLOOR  10
 #define RAMP_DISCRETE_CEIL   130
 #define RAMP_DISCRETE_STEPS  7
+
+// AS
+#define STROBE_BRIGHTNESS DEFAULT_LEVEL
 
 // at Wurkkos's request, reduce the Simple UI ceiling a little bit
 // (i.e. not 150; original config had it at 144/150, or DD FET 204/255)
@@ -80,4 +84,10 @@
 
 // enable factory reset on 13H without loosening tailcap (required)
 #define USE_SOFT_FACTORY_RESET
+
+// AS
+#define USE_POLICE_COLOR_STROBE_MODE
+#define POLICE_STROBE_USES_AUX
+#define POLICE_COLOR_STROBE_CH1        CM_AUX
+#define POLICE_COLOR_STROBE_CH2        CM_MAIN
 
