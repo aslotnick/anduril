@@ -159,8 +159,15 @@
 #define USE_BIKE_FLASHER_MODE
 #define USE_PARTY_STROBE_MODE
 #define USE_TACTICAL_STROBE_MODE
-#define USE_LIGHTNING_MODE
-#define USE_CANDLE_MODE
+
+// AS: disable some strobes
+#ifdef USE_LIGHTNING_MODE
+#undef USE_LIGHTNING_MODE
+#endif
+#ifdef USE_CANDLE_MODE
+#undef USE_CANDLE_MODE
+#endif
+
 
 // boring strobes nobody really likes, but sometimes flashlight companies want
 // (these replace the fun strobe group,

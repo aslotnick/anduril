@@ -21,10 +21,11 @@ strobe_mode_te current_strobe_type;
 // full FET strobe can be a bit much...  use max regulated level instead,
 // if there's a bright enough regulated level
 #ifndef STROBE_BRIGHTNESS
+// AS: lower the brightness for testing
 #ifdef MAX_Nx7135
-#define STROBE_BRIGHTNESS MAX_Nx7135
+#define STROBE_BRIGHTNESS (MAX_Nx7135/3)
 #else
-#define STROBE_BRIGHTNESS MAX_LEVEL
+#define STROBE_BRIGHTNESS (MAX_LEVEL/3)
 #endif
 #endif
 
@@ -43,6 +44,11 @@ inline void strobe_state_iter();
 
 #if defined(USE_PARTY_STROBE_MODE) || defined(USE_TACTICAL_STROBE_MODE)
 inline void party_tactical_strobe_mode_iter(uint8_t st);
+// AS: overwrite party strobe ontime to a much higher value
+#ifdef PARTY_STROBE_ONTIME
+#undef PARTY_STROBE_ONTIME
+#endif
+#define PARTY_STROBE_ONTIME 250
 #endif
 
 #ifdef USE_POLICE_COLOR_STROBE_MODE

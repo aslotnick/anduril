@@ -228,7 +228,8 @@ inline void party_tactical_strobe_mode_iter(uint8_t st) {
     }
     #endif
     set_level(STROBE_OFF_LEVEL);
-    nice_delay_ms(del);  // no return check necessary on final delay
+    // AS: 4x delay to enable 1020ms pause / 1Hz
+    nice_delay_ms(del << 2);  // no return check necessary on final delay
 }
 #endif
 
