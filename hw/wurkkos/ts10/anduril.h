@@ -81,3 +81,8 @@
 // enable factory reset on 13H without loosening tailcap (required)
 #define USE_SOFT_FACTORY_RESET
 
+// Enable police strobe using main and aux emitters
+#define USE_POLICE_COLOR_STROBE_MODE
+#define POLICE_STROBE_USES_AUX
+#define POLICE_COLOR_STROBE_CH1        CM_AUX
+#define POLICE_COLOR_STROBE_CH2        CM_MAIN
